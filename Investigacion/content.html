@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Autor" content="Jeremy Hernandey Balderas">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Investigacion de conceptos</title>
+    <script>
+        alert("Nombre del alumno:Jeremy Hernandez Balderas \nNumero de lista:#15 \nGrupo:PROG4A \nClase:M3S2")
+    </script>
+</head>
+<body>
+    <h1>Investigacion de conceptos de programacion web</h1>
+    
+    <h2>¿Que es un form?</h2>
+    <div id="contenido">
+        <p>Un formulario en html es una seccion de contenido normal, codigo y elemtos especiales llamados "controles" (radio button, button, textbox, etc.) con los cuales los usuarios "completan" el formulario con la informacion que sea requerida</p>
+    </div>
+
+    <h2>¿Como crear un Form?</h2>
+    <div class="subcontenido">
+    <pre class="subtexto">
+    Ejemplo sencillo
+
+&lt;FORM action="http://algunsitio.com/prog/usuarionuevo" method="post"&gt;
+&lt;P&gt;
+&lt;LABEL for="nombre"&gt;Nombre: &lt;/LABEL&gt;
+    &lt;INPUT type="text" id="nombre"&gt;&lt;BR&gt;
+&lt;LABEL for="apellido"&gt;Apellido: &lt;/LABEL&gt;
+        &lt;INPUT type="text" id="apellido"&gt;&lt;BR&gt;
+    &lt;LABEL for="email"&gt;email: &lt;/LABEL&gt;
+    &lt;INPUT type="text" id="email"&gt;&lt;BR&gt;
+&lt;INPUT type="radio" name="sexo" value="Varón"&gt; Varón&lt;BR&gt;
+&lt;INPUT type="radio" name="sexo" value="Mujer"&gt; Mujer&lt;BR&gt;
+&lt;INPUT type="submit" value="Enviar"&gt; &lt;INPUT type="reset"&gt;
+&lt;/P&gt;
+&lt;/FORM&gt;
+        </pre>
+    </div>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="#Controles_de_texto">Controles de texto</a></li>
+            <li><a href="#Controles_de_verificacion">Controles de verificacion</a></li>
+            <li><a href="#Botones">Botones</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <h2>Controles de texto</h2>
+    <div class="contenido" id="Controles_de_texto">
+        <p>Para que el usuario pueda ingresar datos de tipo texto generalmente se utlizan inputs de tipo texto, estas tiene dos principales variantes, texto de una sola linea y texto de multiples lineas, que su uso varia dependiendo que se requiera que el usuario ingrese dentro de el objeto</p>
+        <h3>Cajas de texto de una linea</h3>
+        <p>Las imput box de texto comunes solo adminten que el usuario solo pueda escribir una linea de texto, en el siguiente codigo de ejempo esta el codigo para insertar un imput box de una linea</p>
+    </div>
+    <div class="subcontenido">
+        <pre class="subtexto">
+    Ejemplo de creacion de un imput text box de una linea
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title%gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="text"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+            <input type="text">
+        </pre>
+    </div>
+
+    <div class="contenido">
+        <h3>Cajas de texto de multiples lineas</h3>
+        <p>En caso de ser requerido hay una etiqueta que permite el ingreso de varias lineas de texto, se utliza la etiqueta &lt;textarea cols="30" rows="10"&gt;&lt;/textarea&gt; en la cual se tendra que especificar el numero de filas ("rows") y columnas ("cols") que determinan el tamaño del objeto</p>
+    </div>
+    <div class="subcontenido">
+        <pre class="subtexto">
+        Ejemplo de creacion de un cuadro de texto largo
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title%gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;textarea cols="30" rows="10"&gt;&lt;/textarea&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+            <textarea cols="30" rows="10"></textarea>
+        </pre>
+    </div>
+    <hr>
+    <h2>Controles de verificacion</h2>
+    <div class="contenido" id="Controles_de_verificacion">
+        <p>En ciertos casos es requerido que el usuario solo pueda seleccionar entre un conjunto de opciones pre establecidad, para eso se utlizan etiquetas tales como checkbox ,radiobutton o listas desplegables</p>
+    </div>
+    <div class="contenido">
+        <h3>checkbox</h3>
+        <p>las checkbox permiten crear varias opciones de seleccion, de las cuales los usuarios pueden seleccionar una o varias segun demande la situacion</p>
+    </div>
+    <div class="subcontenido">
+        <pre class="subtexto">
+        Ejemplo de creacion checkboxs
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title%gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="checkbox" id="checkbox1"&gt;&lt;label&gt;Opcion 1&lt;/label&gt;
+    &lt;input type="checkbox" id="checkbox2"&gt;&lt;label&gt;Opcion 2&lt;/label&gt;
+    &lt;input type="checkbox" id="checkbox3"&gt;&lt;label&gt;Opcion 3&lt;/label&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+            <input type="checkbox" id="checkbox1"><label>Opcion 1</label>
+            <input type="checkbox" id="checkbox2"><label>Opcion 2</label>
+            <input type="checkbox" id="checkbox3"><label>Opcion 3</label>
+        </pre>
+    </div>
+    <div class="contenido">
+        <h3>Radiobutton</h3>
+        <p>Los radiobutton tienen un funcionamiento similar a los checkbox con la diferencia que en este caso el usario solo prodra seleccionar solamente una opccion, para que esta funcion sea valida en el atributo name del radiobutton hay que asignarle el mismo valor al conjunto de radiobuttons que queramos que se le aplique</p>
+    </div>
+    <div class="subcontenido">
+        <pre class="subtexto">
+        Ejemplo de creacion radiobutton
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input name="radio" type="radio" id="radio1"&gt;&lt;label&gt;Opcion 1&lt;/label&gt;
+    &lt;input name="radio" type="radio" id="radio2"&gt;&lt;label&gt;Opcion 2&lt;/label&gt;
+    &lt;input name="radio" type="radio" id="radio3"&gt;&lt;label&gt;Opcion 3&lt;/label&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+            <input type="radio" name="radio" id="radio1"><label>Opcion 1</label>
+            <input type="radio" name="radio" id="radio2"><label>Opcion 2</label>
+            <input type="radio" name="radio" id="radio3"><label>Opcion 3</label>
+    </div>
+    <div class="contenido">
+        <h3>Listas</h3>
+        <p>La etiqueta select tiene la funcion de crea una lista desplegable de la cual se podra elegir una de las opciones que esta contenga, normalmente el contenido de la etiqueta se tiene que llenar a mano, pero mediante metodos de un script se pueden llenar el contenido de manera automatica</p>
+    </div>
+    <div class="subcontenido">
+        <pre class="subtexto">
+        Ejemplo de creacion de una lista
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;select id="lista"&gt;
+        &lt;option&gt;Opcion 1&lt;/option&gt;
+        &lt;option&gt;Opcion 2&lt;/option&gt;
+        &lt;option&gt;Opcion 3&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+            <select id="lista">
+                <option>Opcion 1</option>
+                <option>Opcion 2</option>
+                <option>Opcion 3</option>
+            </select>
+    </div>
+    <hr>
+    <h2>Botones</h2>
+    <div class="contenido" id="Botones">
+        <p>Uno de las principales etiquetas de html son los botones a los cuales se le pueden asignar un sin fin de funcionalidades tanto de llamar a funciones de un script o dirigit a una parte de la pagina, en el caso especifico de un formulario los dos principales botones empleados son botones de envio y botones de reinicio</script></p>
+    </div>
+    <div class="contenido">
+        <h3>Boton submit</h3>
+        <p>El botón submit sirve para enviar el formulario una vez el usuario ha rellenado todos sus campos y pulsa en este botón. El texto por defecto del botón será Enviar (o equivalente según el idioma). Podemos modificar el texto del botón mediante el atributo value.</p>
+    </div>
+    <div class="subcontenido">
+        <pre class="subtexto">
+        Ejemplo de boton submit
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title%gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="formulario" method="post" action="send.php"&gt;
+        Usuario: &lt;input type="text" name="usuario" /&gt;
+        &lt;input type="submit" value="Enviar formulario" /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+        <form name="formulario" method="post">
+            Usuario: <input type="text" name="usuario" />
+            <input type="submit" value="Enviar formulario" />
+        </form>
+        </pre>
+    </div>
+    <div class="contenido">
+        <h3>Boton reinicio</h3>
+        <p>El botón reset nos ofrece la posibilidad de disponer de un botón que al pulsarse borre completamente el formulario y reestablece todos sus campos de entrada de datos a sus valores por defecto iniciales. Es muy útil si queremos que el usuario disponga de la posibilidad de borrar todos los campos del formulario fácilmente y no tener que hacerlo uno por uno.</p>
+    </div>
+    <div class="subcontenido">
+        <pre class="subtexto">
+        Ejemplo de boton reinicio
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title%gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="formulario" method="post"&gt;
+        Usuario: &lt;input type="text" name="usuario" /&gt;
+        &lt;input type="submit" value="Enviar formulario" /&gt;
+        &lt;input type="reset" value="Borrar formulario" /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+        <form name="formulario" method="post"">
+            Usuario: <input type="text" name="usuario" />
+            <input type="submit" value="Enviar formulario" />
+            <input type="reset" value="Borrar formulario" />
+        </form>
+        </pre>
+    </div>
+    </body>
+</html>
